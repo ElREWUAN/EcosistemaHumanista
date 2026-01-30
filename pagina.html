@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Patricia Arieta Melgarejo | Ecosistema Humanista</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <style>
+    /* --- ESTILOS MEJORADOS PARA TRAYECTORIA --- */
+
+/* Contenedor central más estrecho para lectura cómoda */
+.trayectoria-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Título del bloque (Formación / Logros) */
+.bloque-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+.bloque-header i {
+    background: var(--verde-profundo);
+    color: white;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+.bloque-header h3 {
+    color: var(--azul-academia);
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+/* La tarjeta individual */
+.timeline-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px; /* Espacio entre tarjetas */
+    align-items: flex-start; /* Alineación arriba */
+}
+
+/* El año/fecha (Badge) */
+.timeline-date {
+    background: var(--azul-academia);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 85px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(28, 61, 90, 0.2);
+    position: relative;
+    top: 0; /* Ajuste visual */
+}
+
+/* Año destacado (ej. 2025) */
+.timeline-date.highlight {
+    background: var(--turquesa);
+}
+
+/* El contenido (Caja blanca) */
+.timeline-content {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    flex: 1; /* Ocupa el resto del espacio */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Sombra suave */
+    border-left: 5px solid var(--verde-profundo); /* Borde de color */
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px); /* Pequeña animación al pasar mouse */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Tipografía interna */
+.timeline-content h4 {
+    color: #333;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+.timeline-content .institution {
+    color: var(--verde-profundo);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 5px;
+}
+.timeline-content .details {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* RESPONSIVE (Celulares) */
+@media (max-width: 768px) {
+    .timeline-card {
+        flex-direction: column; /* Uno debajo del otro */
+        gap: 10px;
+    }
+    .timeline-date {
+        align-self: flex-start; /* Alinear a la izquierda */
+        padding: 5px 15px;
+        font-size: 0.9rem;
+    }
+}
+    /* --- 1. VARIABLES DE DISEÑO --- */
+    :root {
+        --verde-profundo: #1F6F5C;
+        --azul-academia: #1C3D5A;
+        --turquesa: #3FA7A3;
+        --arena: #E6D5B8;
+        --blanco: #ffffff;
+        --gris-fondo: #F8F9FA;
+        --texto-principal: #333333;
+        --texto-secundario: #666666;
+        --sombra-suave: 0 4px 20px rgba(28, 61, 90, 0.08);
+    }
+
+    /* --- 2. BASES --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--texto-principal);
+        background-color: var(--gris-fondo);
+        line-height: 1.6;
+    }
+    h1, h2, h3, h4 { font-family: 'Lora', serif; }
+    a { text-decoration: none; transition: 0.3s; }
+    ul { list-style: none; }
+    section { padding: 5rem 5%; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* Títulos */
+    .section-title {
+        text-align: center; color: var(--azul-academia); font-size: 2.2rem;
+        margin-bottom: 3rem; position: relative;
+    }
+    .section-title::after {
+        content: ''; display: block; width: 60px; height: 3px;
+        background: var(--turquesa); margin: 10px auto 0;
+    }
+
+    /* --- 3. NAVEGACIÓN --- */
+    .navbar {
+        background: rgba(28, 61, 90, 0.98); padding: 1rem 5%;
+        display: flex; justify-content: space-between; align-items: center;
+        position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .logo { color: var(--blanco); font-size: 1.2rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: var(--blanco); font-weight: 500; }
+    .nav-links a:hover { color: var(--turquesa); }
+
+    /* --- 4. HERO (Portada) --- */
+    .hero {
+        background: linear-gradient(135deg, var(--verde-profundo) 0%, var(--azul-academia) 100%);
+        color: var(--blanco); padding: 8rem 5% 5rem;
+        display: flex; align-items: center; justify-content: space-between;
+        min-height: 80vh; position: relative;
+    }
+    .hero-text { flex: 1; max-width: 600px; padding-right: 20px; }
+    .hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1rem; }
+    .hero-text h2 { font-size: 1.3rem; color: var(--arena); margin-bottom: 2rem; }
+    .btn-cta {
+        display: inline-block; background: var(--turquesa); color: var(--blanco);
+        padding: 12px 35px; border-radius: 50px; font-weight: 700;margin-top: 30px;
+    }
+    .hero-img-box img {
+        width: 300px; height: 300px; object-fit: cover; border-radius: 50%;
+        border: 5px solid var(--arena);
+    }
+
+    /* --- 5. ESTRUCTURA DE CONTENIDO (Aquí está la magia para tus listas largas) --- */
+    
+    /* REJILLA DE PUBLICACIONES */
+    .pubs-section { background-color: var(--gris-fondo); }
+    .pubs-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Esto crea columnas automáticas */
+        gap: 2rem; 
+    }
+    .pub-card {
+        background: white; border-radius: 12px; overflow: hidden;
+        display: flex; flex-direction: column; border: 1px solid #eee; height: 100%;
+        box-shadow: var(--sombra-suave); transition: 0.3s;
+    }
+    .pub-card:hover { transform: translateY(-5px); }
+    .pub-header { padding: 1.5rem; color: white; text-align: center; font-size: 2rem; }
+    .pub-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .pub-meta { margin-top: auto; border-top: 1px solid #eee; padding-top: 15px; color: var(--verde-profundo); font-size: 0.8rem; font-weight: bold; }
+
+    /* REJILLA DE NOTICIAS */
+    .news-section { background-color: var(--blanco); }
+    .news-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+        gap: 2.5rem; 
+    }
+    .news-card {
+        background: white; border-radius: 15px; overflow: hidden;
+        box-shadow: var(--sombra-suave); transition: 0.3s; border: 1px solid #eee;
+    }
+    .news-card:hover { transform: translateY(-5px); }
+    .news-img { height: 200px; background: var(--azul-academia); position: relative; overflow: hidden; }
+    .news-img img { width: 100%; height: 100%; object-fit: cover; }
+    .news-date {
+        position: absolute; top: 15px; left: 15px; background: var(--turquesa);
+        color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+    }
+    .news-content { padding: 1.5rem; }
+
+    /* FOOTER */
+    footer { background: var(--azul-academia); color: var(--arena); text-align: center; padding: 3rem; }
+
+    /* ANIMACIONES */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .hero { flex-direction: column-reverse; text-align: center; padding-top: 6rem; }
+        .hero-text { padding-right: 0; margin-top: 2rem; }
+        .nav-links { display: none; }
+    }
+     /* --- CORRECCIONES DE ESTILO (Menú y Quién Soy) --- */
+        
+        /* 1. Menú Azul (Estilo Ecosistema Humanista) */
+        .navbar {
+            background: rgba(28, 61, 90, 0.95) !important; /* Azul Academia */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: none !important;
+        }
+        .logo { color: #ffffff !important; letter-spacing: 1px; }
+        .nav-links a { color: #ffffff !important; opacity: 0.9; }
+        .nav-links a:hover { color: var(--turquesa) !important; opacity: 1; }
+
+        /* 2. Estilos para sección Quién Soy */
+        .about-section { background-color: var(--blanco); padding: 5rem 5%; }
+        .lead-text { 
+            font-size: 1.15rem; text-align: center; max-width: 800px; margin: 0 auto 2rem; 
+            line-height: 1.8; color: var(--texto-secundario);
+        }
+        .academic-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 2rem; }
+        .link-badge { 
+            padding: 10px 25px; border-radius: 50px; color: white; text-decoration: none; 
+            font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; 
+            font-weight: 600; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .link-badge:hover { transform: translateY(-3px); opacity: 0.95; }
+        
+        /* Colores específicos de botones */
+        .link-badge.uv { background: var(--verde-profundo); }
+        .link-badge.orcid { background: #A6CE39; }
+        .link-badge.research { background: #00CCBB; }
+
+        /* 3. Ajuste de Títulos para coincidir */
+        .section-title { font-family: 'Lora', serif; color: var(--azul-academia); }
+        .section-title::after { background: var(--turquesa); height: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Ecosistema Humanista
+        </div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#trayectoria">Trayectoria</a>
+            <a href="#publicaciones">Publicaciones</a>
+            <a href="#noticias">Noticias</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-text fade-up">
+            <h1>Dra. Patricia Arieta Melgarejo</h1>
+            <h2>Comunidad, Tecnología y Cultura de Paz</h2>
+            <div class="hero-quote">
+                "Ciencia, educación e innovación para transformar realidades desde la universidad y la sociedad."
+            </div>
+            <a href="https://www.uv.mx/personal/parieta/" target="_blank" class="btn-cta">
+                Ver Perfil Académico <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-img-box fade-up">
+            <img src="https://www.uv.mx/prensa/files/2021/08/200821-SGC-4.jpg" alt="Dra. Patricia Arieta" class="profile-img">
+        </div>
+
+
+    </header>
+    <section id="quien-soy" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Quién Soy</h2>
+            <div class="about-text fade-up">
+                <p class="lead-text">
+                    Académica comprometida con la innovación docente y la visión integral. Mi trabajo se enfoca en la aplicación y transformación del conocimiento con un profundo sentido humano, buscando siempre conectar la tecnología con el bienestar social y la cultura de paz.
+                </p>
+                
+                <div class="academic-links">
+                    <a href="https://www.uv.mx/personal/parieta/" class="link-badge uv" target="_blank">
+                        <i class="fas fa-university"></i> Sitio UV
+                    </a>
+                    <a href="https://orcid.org/0009-0000-9721-7350" class="link-badge orcid" target="_blank">
+                        <i class="https://orcid.org/0009-0000-9721-7350"></i> ORCID
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Patricia-Arieta-Melgarejo" class="link-badge research" target="_blank">
+                        <i class="fas fa-flask"></i> ResearchGate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="trayectoria" class="trayectoria-section">
+    <div class="container">
+        <h2 class="section-title">Trayectoria Académica</h2>
+
+        <div class="trayectoria-container">
+            
+            <div class="bloque-header">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Formación Académica</h3>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date">2013</div>
+                <div class="timeline-content">
+                    <h4>Doctorado en Administración Pública</h4>
+                    <span class="institution">Instituto de Administración Pública Estatal</span>
+                    <span class="details">México | Grado obtenido</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date">Maestría</div>
+                <div class="timeline-content">
+                    <h4>Maestría en Educación con Especialidad en Metodología</h4>
+                    <span class="institution">Instituto de Ciencias y Estudios Superiores de Tamaulipas, A.C.</span>
+                    <span class="details">México | Grado obtenido</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date">1994</div>
+                <div class="timeline-content">
+                    <h4>Licenciado en Informática</h4>
+                    <span class="institution">Universidad Veracruzana</span>
+                    <span class="details">México | Grado obtenido</span>
+                </div>
+            </div>
+
+
+            <div class="bloque-header">
+                <i class="fas fa-medal"></i>
+                <h3>Logros y Reconocimientos</h3>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2025</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>2º Lugar Zona 6 Sur - Premio Nacional de Resultados de Investigación</h4>
+                    <span class="institution">ANFECA</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2024</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Ingreso al Padrón Veracruzano de Investigadores</h4>
+                    <span class="institution">Gobierno del Estado de Veracruz</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2024</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Miembro del IEEE</h4>
+                    <span class="institution">Instituto de Ingenieros en Electricidad y Electrónica</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2024</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Integrante del Directorio de Asesores</h4>
+                    <span class="institution">Programa Delfín 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2023</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Reconocimiento al Mérito Académico «Arturo Elizundia Charles»</h4>
+                    <span class="institution">ANFECA</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2023</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Académico Certificado en Informática Administrativa</h4>
+                    <span class="institution">ANFECA</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2023</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Premio al Fomento y Consolidación de la Investigación</h4>
+                    <span class="institution">Universidad Veracruzana</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2022</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Perfil deseable PRODEP</h4>
+                    <span class="institution">Secretaría de Educación Pública</span>
+                </div>
+            </div>
+
+            <div class="timeline-card fade-up">
+                <div class="timeline-date highlight">2020-22</div>
+                <div class="timeline-content" style="border-left-color: var(--turquesa);">
+                    <h4>Directora General de Vinculación (Trayectoria y Consolidación)</h4>
+                    <span class="institution">Universidad Veracruzana</span>
+                </div>
+            </div>
+
+        </div> </div>
+</section>
+
+
+<section id="publicaciones" class="pubs-section">
+        <h2 class="section-title">Publicaciones e Investigación</h2>
+        <div class="pubs-grid">
+
+            <a href="http://dx.doi.org/10.58299/edutec.v33i2.438" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Recursos instruccionales y aprendizaje de la programación en Java: una experiencia basada en el diseño</h4>
+                    <p>EDUCATECONCIENCIA</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="http://dx.doi.org/10.18041/2539-3669/gestionlibre.17.2024.11765" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Entorno laboral de las Mipymes Xalapeñas: de la identificación de malestares profesionales hacia la construcción de entornos saludables</h4>
+                    <p>Gestión y Desarrollo Libre</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2024)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="http://dx.doi.org/10.52080/rvgluz.29.106.6" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Capacidad de innovación desde el modelado estadístico</h4>
+                    <p>Revista Venezolana de Gerencia</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2024)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368757182_EL_IMPACTO_DEL_USO_DE_FACEBOOK_PARA_LAS_MIPYMES_DEL_SECTOR_LLANTERO_DE_XALAPA_VERACRUZ" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>El impacto del uso de Facebook para las Mipymes del sector llantero de Xalapa, Veracruz</h4>
+                    <p>Innovación-economía</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2022)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368757214_DISENO_DE_UNA_GUIA_DE_ANALISIS_PARA_LA_MINERIA_DE_PROCESOS_ENFOCADA_EN_EL_USUARIO" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Diseño de una guía de análisis para la minería de procesos enfocada en el usuario</h4>
+                    <p>Ciencia Administrativa</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2018)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368757174_Hacia_un_marco_de_trabajo_de_mineria_de_procesos_enfocado_en_el_usuario" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Hacia un marco de trabajo de minería de procesos enfocado en el usuario</h4>
+                    <p>Ciencias de la Información</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2018)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756991_DESEMPENO_CAPITAL_HUMANO_Y_DESASTRES_NATURALES_ESTRATEGIAS_PARA_EL_SECTOR_ARTESANAL" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Desempeño, capital humano y desastres naturales: Estrategias para el sector artesanal</h4>
+                    <p>Revista Internacional Administración & Finanzas</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2016)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368757117_The_Contingent_Effect_of_entrepreneurial_orientation_on_small_business_performance_inhostile_environments" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>The Contingent Effect of entrepreneurial orientation on small business performance in hostile environments</h4>
+                    <p>Ciencias Administrativas. Teoría y Praxis</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2016)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368757117_The_Contingent_Effect_of_entrepreneurial_orientation_on_small_business_performance_inhostile_environments" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Conociendo el territorio a través de los SIG's para priorizar políticas públicas</h4>
+                    <p>Global conferencia on business and finance procedings</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2013)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>THE HEURISTIC PROGRAMMING: JAVA VIRTUAL BOOK PROJECT</h4>
+                    <p>International Technology, Education and Development Conference</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2012)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756883_BENEFICIOS_DE_LA_CERTIFICACION_DE_LOS_PROGRAMAS_EDUCATIVOS_DE_CONTADURIA_Y_ADMINISTRACION_DE_LA_UNIVERSIDAD_VERACRUZANA" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Beneficios de la certificación de los programas educativos de Contaduría y Administración</h4>
+                    <p>Global Conference on Business and Finance Proceedings</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2011)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756705_ESTRATEGIA_LUDICA_DE_ENSENANZAAPRENDIZAJE_CASO_SISTEMA_DE_MARATONES_DEL_CONOCIMIENTO_DE_LA_UNIVERSIDAD_VERACRUZANA" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--verde-profundo);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Estrategia lúdica de enseñanza-aprendizaje: Caso Sistema de Maratones del Conocimiento</h4>
+                    <p>Global Conference on Business and Finance Proceedings</p>
+                    <div class="pub-meta">
+                        <span>Artículo (2011)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="http://dx.doi.org/10.61728/AE20257798" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Guía de exploración del ciberespacio</h4>
+                    <p>Astra Ediciones</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="http://dx.doi.org/10.61728/AE20257804" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Las semillas del emprendimiento. Una aventura para aprender valores</h4>
+                    <p>Astra Ediciones</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="http://dx.doi.org/10.61728/AE20250607" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Dinámicas de gestión administrativa para el desarrollo social, económico y sustentable</h4>
+                    <p>Astra Ediciones</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Ambientes educativos sustentables y saludables: Ergonomía tecnológica en la vida escolar</h4>
+                    <p>Investigación en la educación superior</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Análisis comparado de la actitud hacia la sostenibilidad entre estudiantes</h4>
+                    <p>XVIII Seminario de Investigación en Educación Ambiental</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Valoración percibida de las competencias en sostenibilidad</h4>
+                    <p>XVIII Seminario de Investigación en Educación Ambiental</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756488_Hacia_un_Mundo_Digital_Inclusivo_e_Igualitario_en_las_Organizaciones_Educativas" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Hacia un Mundo Digital Inclusivo e Igualitario en las Organizaciones Educativas</h4>
+                    <p>Pensar las Organizaciones Una Mirada Multidimensional</p>
+                    <div class="pub-meta">
+                        <span>Libro (2023)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756397_Certificaciones_objetivas_y_transparentes_para_playas" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Certificaciones objetivas y transparentes para playas</h4>
+                    <p>Modelos y herramientas de gestión</p>
+                    <div class="pub-meta">
+                        <span>Libro (2020)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756385_La_auditoria_informatica_y_la_perspectiva_de_un_ejercicio_etico_a_traves_de_la_Ergonomia_Digita" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La auditoría informática y la perspectiva de un ejercicio ético a través de la Ergonomía Digital</h4>
+                    <p>Ejercicio ético y responsable de la Auditoría</p>
+                    <div class="pub-meta">
+                        <span>Libro (2018)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756543_El_giro_decolonial_y_la_critica_a_la_modernidad_colonial_de_la_teoria_organizacional_como_campo_de_conocimiento_-_Apuntes_para_la_reflexion" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>El giro decolonial y la crítica a la modernidad colonial de la teoría organizacional</h4>
+                    <p>Estudios organizacionales y administración</p>
+                    <div class="pub-meta">
+                        <span>Libro (2017)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756524_Ergonomia_digital_con_una_vision_de_progreso_y_calidad_de_vida" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Ergonomía digital con una visión de progreso y calidad de vida</h4>
+                    <p>EQUIDAD Y DESARROLLO Oportunidades y desafíos</p>
+                    <div class="pub-meta">
+                        <span>Libro (2017)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756349_La_auditoria_informatica_como_mecanismo_de_Evaluacion_y_Control_al_Sistema_del_Centro_de_Apoyo_a_la_CAT" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La auditoría informática como mecanismo de Evaluación y Control al Sistema del Centro de Apoyo</h4>
+                    <p>Auditoría. Herramienta de innovación</p>
+                    <div class="pub-meta">
+                        <span>Libro (2016)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756515_Los_proyectos_productivos_y_la_cohesion_social_en_Mexico_Los_parametros_de_la_desigualdad" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Los proyectos productivos y la cohesión social en México</h4>
+                    <p>Auditoría. Herramienta de innovación</p>
+                    <div class="pub-meta">
+                        <span>Libro (2016)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756161_El_nuevo_paradigma_de_la_Auditoria_en_el_orden_social" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Auditoría de gestión: interrelación de las 3 "E"</h4>
+                    <p>El nuevo paradigma de la Auditoría en el orden social</p>
+                    <div class="pub-meta">
+                        <span>Libro (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756296_EL_MOBILE_LEARNING_EN_LA_EDUCACION_A_DISTANCIA_COMO_MEDIO_PARA_INCREMENTAR_LA_COBERTURA_EN_LAS_INSTITUCIONES_PUBLICAS_DE_EDUCACION_SUPERIOR" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>El mobile learning en la educación a distancia como medio para incrementar la cobertura</h4>
+                    <p>Crisis del desarrollo global</p>
+                    <div class="pub-meta">
+                        <span>Libro (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+    
+            <a href="https://www.researchgate.net/publication/368756079_REFERENCIAS_DE_CONTABILIDAD_Y_AUDITORIA_ENFOQUES_MEXICO-CUBA" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La auditoría y la gobernanza de las TI en México</h4>
+                    <p>Referencias de contabilidad y auditoria</p>
+                    <div class="pub-meta">
+                        <span>Libro (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.researchgate.net/publication/368756340_Crisis_del_desarrollo_global_Gobernanza_e_instituciones" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La ingobernabilidad fiscal en México</h4>
+                    <p>Crisis del desarrollo global</p>
+                    <div class="pub-meta">
+                        <span>Libro (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Reforma, modernización e innovación en las políticas fiscales en México</h4>
+                    <p>Experiencias Latinoamericanas y Gobernanza y Gestión Pública</p>
+                    <div class="pub-meta">
+                        <span>Libro (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Didáctica tráves de e-book Java</h4>
+                    <p>Las Instituciones educativas ante los retos tecnológicos</p>
+                    <div class="pub-meta">
+                        <span>Libro (2014)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.researchgate.net/publication/368756139_Gestion_del_aprendizaje_sustentable_un_paradigma_ecologico" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Gestión del aprendizaje sustentable: un paradigma ecológico</h4>
+                    <p>Gestión y gobernanza</p>
+                    <div class="pub-meta">
+                        <span>Libro (2013)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://dx.doi.org/10.61728/AE20251024" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>TIC como estrategia para avanzar en los ODS en la Universidad Veracruzana</h4>
+                    <p>Gestión sustentable para el desarrollo organizacional</p>
+                    <div class="pub-meta">
+                        <span>Libro (2025)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://doi.org/10.1007%2F978-3-030-12388-8_47" target="_blank" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--azul-academia);">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Design of an Analysis Guide for User-Centered Process Mining Projects</h4>
+                    <p>Lecture Notes in Networks and Systems</p>
+                    <div class="pub-meta">
+                        <span>Libro (S/F)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Fomento de proyectos emprendedores como estrategia para el desarrollo de competencias</h4>
+                    <p>Publicación académica</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2018)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Jugando con la química y el emprendimiento: Una propuesta lúdica</h4>
+                    <p>Publicación académica</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2018)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Cloud Computing, Una nueva forma de competitividad para las Pymes de Xalapa</h4>
+                    <p>XIX Congreso Internacional de Investigación en Ciencias Administrativas</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2015)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Implantación de Sistemas Dinámicos: Proyecto Sistema Integral de Gestión Administrativa</h4>
+                    <p>XI Congreso Internacional de la Academia de Ciencias Administrativas</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2014)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La planificación urbanística a través de los sistemas de información geográfica</h4>
+                    <p>XVIII Congreso Internacional de Investigación en Ciencias Administrativas</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2014)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La responsabilidad social del posgrado en la FCA, UV</h4>
+                    <p>Universidad 2014 9vo Congreso Internacional de Educación Superior</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2014)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Caracterización de los servicios públicos de El Conejo a través de un SIG</h4>
+                    <p>CIICI 2012</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2012)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>La responsabilidad social y la competitividad como base de la gestión de negocios</h4>
+                    <p>Congreso Internacional de Investigación en Negocios</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2011)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>Organizaciones virtuales en el sector público: El E-Gobierno en Veracruz</h4>
+                    <p>Congreso Internacional de Investigación en Negocios y Ciencias Administrativas</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2011)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="pub-card fade-up">
+                <div class="pub-header" style="background-color: var(--turquesa);">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="pub-body">
+                    <h4>El papel del profesor universitario en la sociedad del conocimiento</h4>
+                    <p>Congreso sobre educación superior</p>
+                    <div class="pub-meta">
+                        <span>Conferencia (2010)</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <section id="noticias" class="news-section">
+        <h2 class="section-title">Noticias y Eventos</h2>
+        <div class="news-grid">
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">13 Enero 2026</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/616043290_1754038762670021_4397475008242348434_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFI3ua2G6IudZPHYfLgrg0VOYfGTOSj-1A5h8ZM5KP7UGjTI2Yi6OJYP7pdWsPvNnb_jbXI4Va91S3165lP3y5Z&_nc_ohc=Y7Sk3v8Tz-IQ7kNvwFwaWjE&_nc_oc=Adm0E_B7sP0iNSq5ogC7qC_-1Vff8vv2_YaU7mQBBJlj_3AFDv6bPnao6PfR8jxudqHNLH-Z48t7isjQvRLYmnGU&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=wODVeylq7wlBXpEILsjFKQ&oh=00_Afrj0G5f066o78EDHRSIg6Pt0VRxcQt1kJYESuz3wbuSNg&oe=6981E9CD" alt="Competencias de emprendimiento">
+                </div>
+                <div class="news-content">
+                    <h3>¡La FCA brilla en competencias internacionales y nacionales!</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> FCA Xalapa</p>
+                    [cite_start]<p>Orgullo por los resultados obtenidos por estudiantes y académicos en concursos de alto nivel, reflejando la articulación efectiva entre docencia e innovación[cite: 60, 61].</p>
+                    <a href="https://vimeo.com/1144384456/23e9509e3e" target="_blank" class="news-link">Ver video <i class="fas fa-play-circle"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">10 Diciembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/598371501_1726316198775611_6736121783056536621_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGOkFXAB3HNVoBBHylMd1pRfgBQOrvslHx-AFA6u-yUfEfGfDLOW9t5SJ-Wiiz1jIe1koJ4Bh2meJRzAnBgJJ9B&_nc_ohc=g0AcOrOKV0gQ7kNvwEGGFJY&_nc_oc=AdlMrwYD26qs1hwObF_ghkjEmi7w3lF7r9w7gA0Dn46pJz5h8SwDIlWen8LZ45En8KnmyaqCi1pcGv2vZrBLIvUJ&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=fe4nXt4qo2IpUjYFNREoHQ&oh=00_AfpS0tBzqR8IDHMBC5BkqWjJzBXzVBNmS9Tk7apAamlNGg&oe=69820AC8" alt="Entrega de constancias ISO">
+                </div>
+                <div class="news-content">
+                    <h3>Reconocimiento a estudiantes auditores en Certificación ISO</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> FCA Xalapa</p>
+                    [cite_start]<p>Entrega de constancias en la Doble Certificación del SGCUV bajo las normas ISO 9001:2015 e ISO 21001:2018[cite: 75].</p>
+                    <a href="https://www.facebook.com/share/p/1CChNzeXXv/" target="_blank" class="news-link">Leer nota <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">8 Diciembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/595341072_25496898576645539_8206264596647634843_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFWZF8tkYevTumbAmvbcHjzMehUN2ySYVwx6FQ3bJJhXMXhwa3K7AkqqpkzckGcDIS9Tet5g3Sddfx3HB0VCgSG&_nc_ohc=sQoWDalzg3UQ7kNvwGFDSs_&_nc_oc=AdnmtQ_sy7OcyLeJm4KJQPYzy4aSz5JQbZhLm9CX2MCx38_HYoKo4ciG7NLHo-7D65zfK81S9we9KjZ-49e2CWMp&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=VpXArwkCE_GWQg1kvdxOsw&oh=00_Afr1OUtL4h7dLLXpapysPM3X_Ihu9-Z2aVosBYXYpEJ_8g&oe=6981E65B" alt="Evento AccesCiencia">
+                </div>
+                <div class="news-content">
+                    <h3>Participación en el evento AccesCiencia del COVEICYDET</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> Patricia Arieta</p>
+                    [cite_start]<p>Una iniciativa que impulsa la divulgación científica y promueve el acceso al conocimiento para todas y todos[cite: 94].</p>
+                    <a href="#" class="news-link">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">6 Diciembre</span>
+                    <img src="https://www.uv.mx/paz/files/2025/12/UV-Facultad-de-Contaduria-Xalapa-Y.png" alt="Mosaico por la Paz">
+                </div>
+                <div class="news-content">
+                    <h3>Mosaico Nacional por la Paz y Contra las Adicciones</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> Patricia Arieta</p>
+                    [cite_start]<p>Agradecimiento a los estudiantes del 301 LSCA por su entrega y espíritu de unidad en este momento inolvidable[cite: 98, 99].</p>
+                    <a href="https://www.uv.mx/" target="_blank" class="news-link">Ver nota UV <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">3 Diciembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/593881283_1319439110228187_3637545126516077156_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEHKr5n0cISeL1ZXODV_cQRTVwq82_qeQlNXCrzb-p5CT1b4TrRY20DrgG6S58fQzau27_E3j2N6QYh94x5HtQj&_nc_ohc=aeupTIOw_RsQ7kNvwHPxK1l&_nc_oc=AdlxmShJ_Rnm2wQja0SWk0yeYS9-o16Em1LSCvh_YQa8t0zSIVjCFvi8oEH6mJNicsHbPbVF-ya4Yt9XrGlofrh7&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=1SB2glsDfIexJAoycj8Otw&oh=00_AfomOD_kU0lz_kN49MEFsAqdnDmI0xXdvzXBhI5jFhih1A&oe=698205FE" alt="Congreso AccessCiencia">
+                </div>
+                <div class="news-content">
+                    <h3>Día 1 del Congreso AccessCiencia 2025</h3>
+                    <p class="source-badge"><i class="fas fa-university"></i> COVEICYDET</p>
+                    [cite_start]<p>Talleres y conferencias dedicadas a la accesibilidad e inclusión, destacando el taller de Tiflodiseño del CRISVER[cite: 105, 107].</p>
+                    <a href="https://www.facebook.com/share/p/1P2xoik55u/" target="_blank" class="news-link">Ver publicación <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">24 Noviembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/589577621_25386421064359958_4337361492506125675_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFJisc5c3oJnb2Tb_pbkpd3Tkq85rffE6xOSrzmt98TrIVedeLdmzUZNIAaQgK7R_heTuoP_6lUwn3LK8fEI7QA&_nc_ohc=I_iUUqkA7RIQ7kNvwGT91rS&_nc_oc=AdnGM-EMjW5JaeJORFQlUe4Gv7InkhyfyMYBq-nRoHpTdJxXDnzsn0e_wsNl1sSfCjAOhfx767uKQHXtT22olWap&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=klKb9CEND5jBAfF7Ci1Fvw&oh=00_Afr-0ells1PvoWbdmUUuhr1X9F7qFEVWoyxLh_eU7lUAyg&oe=698221ED" alt="Semana Ciencia y Tecnología">
+                </div>
+                <div class="news-content">
+                    <h3>Semana Estatal de Ciencia y Tecnología</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> Patricia Arieta</p>
+                    [cite_start]<p>Construyendo futuro con rigor, empatía y visión junto a colegas de la ciencia y la tecnología[cite: 114].</p>
+                    <a href="#" class="news-link">Más información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">22 Noviembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/585796653_25370635342605197_4196477490852258184_n.jpg?stp=cp6_dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGMQLwtn1SqgDdxfnDb3dJMomGkNFtu40yiYaQ0W27jTO98VkIHikdH0cP1eXtRfMsscQmNYZXO1bLq-W3C8XE0&_nc_ohc=sMp48M15-f8Q7kNvwHRylwb&_nc_oc=AdnITuiB1ZbOktcs7d5lYm1X8WGOLODFUbQdhK2l1UHY2NZuY8DGUZBDOfFNwk6Zl58NHVJq-hDe8v5l75ptgcI2&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=Hdq-HPJngaafXVlm11bXcA&oh=00_AfqVrHQitZuZmVW9G3pC6uctMqyz0QxcutoJVvIL275V9A&oe=6981FC58" alt="Veracruz AI Summit">
+                </div>
+                <div class="news-content">
+                    <h3>Participación en el Veracruz AI Summit 2025</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> Patricia Arieta</p>
+                    [cite_start]<p>Un gusto ser parte de esta iniciativa que inspira y transforma el futuro con tecnología[cite: 119].</p>
+                    <a href="#" class="news-link">Ver evento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">21 Noviembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/586893345_1440586174739349_2671827736512515516_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHWak5vMcmcoJsbxQuSxSEBaFMsC_Jo9YxoUywL8mj1jPB3nVyKVb46SvEIbceDJzd2qyxEFMo3HQ6HysapAleX&_nc_ohc=deBSLxR0-9cQ7kNvwHgbrCy&_nc_oc=AdmxxOzIlJCmFF6vt-yByl9h_uDhaM9-9TPu5Pg8mLBGVxb3YXS2HNAgKqjJnTzacKZVQJ0sn73JTaZ4SZveRRPo&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=tj0C2w-Ss_BzQg5taoej1w&oh=00_AfqZWSrQDtzmUKskNkUl5kArGcHzPJN_WA6kau7oEmFsCw&oe=698209BB" alt="TecNM Campus Perote">
+                </div>
+                <div class="news-content">
+                    <h3>Ponencia sobre Higiene Digital en TecNM Perote</h3>
+                    <p class="source-badge"><i class="fas fa-university"></i> TecNM Perote</p>
+                    [cite_start]<p>Impartición de la ponencia "Higiene Digital en la Educación Superior" dirigida a estudiantes de Ingeniería[cite: 128].</p>
+                    <a href="https://www.facebook.com/share/p/17v3iohT8p/" target="_blank" class="news-link">Leer reseña <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">20 Noviembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/585070541_1242278231271215_8804002519953938405_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE5tXeWF-fu2ZpTFAdFRTntvDmudtAGw6i8Oa520AbDqBBphOdmC-ZmJxX6Ybajo0L4nu8O8ciIx37UdqxdxiJg&_nc_ohc=lcN1fALHczMQ7kNvwHOJPTz&_nc_oc=Adkyc0fCADJxrwKiqiv4qU0ftS_jCOvDcB3FkGXshiNt5sFga1YIYjtwfhwFddoawbdVpg0-6Or_ppxjeETAnCHu&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=1UK5rIZ9pisBHi-YfaZTpg&oh=00_AfpBEpo6B7fAX4XohTYpJlO1UePSoNkNI0GyBRWTJm0d4w&oe=698208FD" alt="ExpoHUB 2025">
+                </div>
+                <div class="news-content">
+                    <h3>ExpoHUB 2025: Innovación que transforma</h3>
+                    <p class="source-badge"><i class="fas fa-university"></i> Univ. de Xalapa</p>
+                    [cite_start]<p>Edición extraordinaria desde el Laboratorio Vivo de Innovación (LAVUX) en colaboración con Enactus México[cite: 139].</p>
+                    <a href="https://www.facebook.com/share/p/1Xop1oteYP/" target="_blank" class="news-link">Ver galería <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">19 Noviembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/571553399_1236380205191308_4564719152709400882_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEos-vVw6zlPJZVTepcFtuxQ_2srxlWnFpD_ayvGVacWoXY4qkn2rirVnvEhjGR19eLjhah1ig9rok3TTGHd7Na&_nc_ohc=RVyLuF_YWj0Q7kNvwHcqdMY&_nc_oc=AdnZJezgi2PsKPAFDfdYZW3KW6DTfp9LJ6Aj8TW9fkkyz3p5fCupEJ52WzqrgjQNBLLKrkMXOF0P_xnZK5aeolbJ&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=U47OnH2kGOX0k6x3Xk01fA&oh=00_AfpAZuL0nu29Af6ZDwbu8eBzkD7HPMUbrlcFuuUZMk7LDg&oe=69820667" alt="Podcast Divulgación">
+                </div>
+                <div class="news-content">
+                    <h3>Podcast: ¿Y esto pa’ qué sirve?</h3>
+                    <p class="source-badge"><i class="fas fa-broadcast-tower"></i> Dirección Investigaciones</p>
+                    [cite_start]<p>Episodio sobre desigualdad de género, hiperconectividad e higiene digital[cite: 149].</p>
+                    <a href="https://soundcloud.com/radiomas" target="_blank" class="news-link">Escuchar ahora <i class="fas fa-headphones"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">22 Septiembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/551099291_24798785213123549_5289269393233771327_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeETXTFXKTwm5ufrTv15A_8ISKqdBOaHxPZIqp0E5ofE9iRp-AxYtLXkkTW7WfLjybJlqYjnwjgx6JsO2lw7yVnH&_nc_ohc=ycT-vCCKlFMQ7kNvwFbYYoB&_nc_oc=AdmGZgfI2LJPoVmI5tHWlR63UXBxigtsSLEMEjJuyzIP_KdoJnZNNnNmGgZAPBNXzk0AzrHV98drHDFtvBzmhPGD&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=wDYmwJE9owKlt3DvbTwKBw&oh=00_AfoWggvIV4d7j84ISq2cwGkAL1L2VeI_n5ZsUSbZMjEPPA&oe=69820491" alt="ICACS 2025">
+                </div>
+                <div class="news-content">
+                    <h3>ICACS 2025: Promoviendo la cultura de Paz</h3>
+                    <p class="source-badge"><i class="fas fa-user-circle"></i> Patricia Arieta</p>
+                    [cite_start]<p>Participación en el International Conference on Administrative Computational Systems[cite: 159].</p>
+                    <a href="#" class="news-link">Más detalles <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">18 Septiembre</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/548145711_1201632022000058_1249952647195419111_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_aid=0&_nc_eui2=AeHdGBLUJWhI41q9Ls5CglhHpnoaBMQonTWmehoExCidNfw66X6Y6lcBJAWhSFrr74BCBV6Ph4dtYtDqE1Hh3Gyj&_nc_ohc=hMG8R-aW-L4Q7kNvwHSrP_g&_nc_oc=Adl4OWEPf-k5a30LU76Ao9XTr1G4pSmdiPHCVfKLkgdnQudjTeHl-csEbOrj79rrqiIxRjI0CXuM3dKy-z-oZvcb&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=KVH6AnORXFLiocqcQTbDLQ&oh=00_AfrBUGParJ0IubKKDluWhbGuv1TlgxFRZ-MB74okC1ELiw&oe=69821E3C" alt="Congreso CICAC">
+                </div>
+                <div class="news-content">
+                    <h3>Congreso CICAC 2025 - Universidad CESMAG</h3>
+                    <p class="source-badge"><i class="fas fa-university"></i> CESMAG</p>
+                    [cite_start]<p>Conferencia: "El papel estratégico de la higiene digital en las organizaciones"[cite: 161].</p>
+                    <a href="https://www.facebook.com/share/p/17zsncRnCN/" target="_blank" class="news-link">Ver información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">19 Junio</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/509352106_1151773056990651_6195403124012600412_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEBCi797aR3NQkL1b10JgS0x_9U_0XE3bLH_1T_RcTdsgTZ5nbTWRCAZ_sYCwxQPE3klEdqVdfawJYD99-jwLiO&_nc_ohc=5QqsW7ZFtkoQ7kNvwGBiEN8&_nc_oc=AdkG7zPp_eaSJJaO5iCXQ7Y20Ho6YawKvyD9K-GCJ2NQTjepih_jDudLbht-hiOmREh0p7hLCBDlI3l42i9PJJKD&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=tq9phPGa-a3uEuvgHAo7ew&oh=00_Afo6WA5IhAVfeYpWGqIG-9j-KmS8Ix38Ucuq76d46N0Fzg&oe=6981FD30" alt="MHTC 2025">
+                </div>
+                <div class="news-content">
+                    <h3>Mexican Humanitarian Technology Conference (MHTC)</h3>
+                    <p class="source-badge"><i class="fas fa-globe-americas"></i> IEEE Puebla</p>
+                    [cite_start]<p>Compartiendo conocimientos sobre cómo la innovación genera impacto positivo en las comunidades[cite: 172].</p>
+                    <a href="https://www.facebook.com/share/p/1D5Us5QjXx/" target="_blank" class="news-link">Ver evento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">29 Mayo</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/501146428_1544851823588717_1134121063767406689_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFkSZSlW4dA0VH-N5PRVh0Io9ixXpyufsqj2LFenK5-yj2R8FZAIHyDbZgyHnINNkmZ4_HDBfqfoXvVqUta4Qjo&_nc_ohc=0W96WhCJEvIQ7kNvwFfKg9g&_nc_oc=AdnfZ6lYAjczpU4UgBs2ik-GNmd7hJPdHD_P2DJ_9KV8cGRNfw4v-PJ99ElFLExGyo-Qq9IRTTaOqLc3GPs76f3k&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=rFeZWYuYDpi73XIMRg0Xig&oh=00_AfoQguCNKZCafrzaLW6N0DYJI9Dat1wZlqRe4AmlhzZc5w&oe=69821B16" alt="Clase Espejo">
+                </div>
+                <div class="news-content">
+                    <h3>Clase Espejo: Auditoría de las TIC</h3>
+                    <p class="source-badge"><i class="fas fa-university"></i> FCA Xalapa</p>
+                    [cite_start]<p>Bienvenida al Dr. Rolando Eslava de la Universidad Libre de Colombia con la ponencia sobre claves de éxito en auditoría[cite: 181].</p>
+                    <a href="https://www.facebook.com/share/p/1GXGCqNV85/" target="_blank" class="news-link">Ver publicación <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">27 Mayo</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/500499509_1217152493440921_224748511807412496_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG1grPcYMNB9kjToeVUgVKDehrHyliqbHx6GsfKWKpsfE-akrLAwpGUv7sVXaF_ebZkoc75Fwszew0raooLmb8s&_nc_ohc=tpyvCmBvvDkQ7kNvwGjFjv7&_nc_oc=AdlKQ7baYP_3sMIP-SfOD8XeJG3WbJufjcd5fhOiu8F3f-7e5SwnzKZNPoQC_arbSWG0S6WYyeufP9L1U34FXxZx&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=111-vLsDtoPcBZu20xRGHQ&oh=00_Afqphfy-CDKChnAGI8bmHEs_14yWRk_PijfWwuYJ9W6_Dg&oe=6981F138" alt="Toma de Protesta IEEE">
+                </div>
+                <div class="news-content">
+                    <h3>Toma de Protesta Rama Estudiantil IEEE UV FIME</h3>
+                    <p class="source-badge"><i class="fas fa-bolt"></i> IEEE FIME</p>
+                    [cite_start]<p>Nombramiento de directivos de la rama y sociedades PES, EDS y WIE, con la presencia de autoridades del COVEICYDET y UV[cite: 191].</p>
+                    <a href="https://www.facebook.com/share/p/17zA4WZ8LH/" target="_blank" class="news-link">Ver fotos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">27 Marzo</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/487191572_122114325806802442_4204754276307837151_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZuu-P0Fdg2-flFS1tb27pgkdMW4EPEOiCR0xbgQ8Q6JRu25R2-MgaPp6V4Lwi-p_tcb3Y5Z6PsLDucaz4fMtj&_nc_ohc=8wrizeocY8sQ7kNvwHEnBXl&_nc_oc=AdnicPwz5xnlBiV68vD326K4fHGM_lYqxuaReZRKLmP1IUcSJsgafAEB3Rfg5yOFNVtDKwV2sZzFsULHIrbuAoUc&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=srV_hO6kjx2XrmnMMLaTuQ&oh=00_AfrYkMiC7drHVunD_4Cf45zp1ptNdUWsmIBDe-w89MMdKw&oe=69820686" alt="Reunión IEEE Veracruz">
+                </div>
+                <div class="news-content">
+                    <h3>Reunión con IEEE Sección Veracruz</h3>
+                    <p class="source-badge"><i class="fas fa-users"></i> IEEE WIE LSCA</p>
+                    [cite_start]<p>Encuentro para reafirmar el compromiso con el desarrollo académico y presentar a los líderes de WIE y Computer Society[cite: 207].</p>
+                    <a href="https://www.facebook.com/share/p/1FhE9offQ5/" target="_blank" class="news-link">Ver nota <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card fade-up">
+                <div class="news-img">
+                    <span class="news-date">20 Enero</span>
+                    <img src="https://scontent.fjal2-1.fna.fbcdn.net/v/t39.30808-6/486479974_1107745981397502_3625541186339221171_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHytEvNknvYw0MgbEbQLRu8COhzdD7qy_gI6HN0PurL-NkcizNId3twW-7KMmFb6OinFsOcP32KuMSy0lXBFZwV&_nc_ohc=Vc8fJnATXJUQ7kNvwGHe19q&_nc_oc=AdnL6asXxirt1yw9uVI3a6nRmTx7lr2Fq_iihW7JQEkUodFLQODxJA9LL1hOIOQ11p0E9SiNq29mWByHhKcg88p7&_nc_zt=23&_nc_ht=scontent.fjal2-1.fna&_nc_gid=AFG3OgdzPu-IOz1HocNOvA&oh=00_Afq7cKZmYIN3P_XL60GaBkXGQ9UiNXwgbBqicWpr6V5Jgw&oe=6982042B" alt="Evaluación Proyectos">
+                </div>
+                <div class="news-content">
+                    <h3>Evaluación de Proyectos COVEICYDET</h3>
+                    <p class="source-badge"><i class="fas fa-clipboard-check"></i> COVEICYDET</p>
+                    [cite_start]<p>Seguimiento al cierre de proyectos apoyados, destacando el impacto y beneficios en sectores de Veracruz[cite: 214].</p>
+                    <a href="https://www.facebook.com/share/p/1FhE9offQ5/" target="_blank" class="news-link">Ver informe <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+  
+
+    <footer>
+        <p>&copy; 2025 Dra. Patricia Arieta Melgarejo | Universidad Veracruzana</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">Ciencia, Educación e Innovación con Impacto Social</p>
+        <div class="footer-links" style="margin-top: 20px;">
+            <a href="#"><i class="fab fa-researchgate"></i></a>
+            <a href="#"><i class="fab fa-orcid"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animación al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            
+            // Scroll suave para el menú
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
